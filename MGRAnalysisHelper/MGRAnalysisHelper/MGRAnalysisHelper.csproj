@@ -128,8 +128,12 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AnalizaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KryteriumController.cs" />
+    <Compile Include="Controllers\SystemKorporacyjnyController.cs" />
     <Compile Include="DAL\DataModelContext.cs" />
+    <Compile Include="DAL\DataModelInitializer.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -142,10 +146,12 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\sb-admin.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
+    <None Include="Content\Site.css_old" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -174,6 +180,24 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Analiza\Create.cshtml" />
+    <Content Include="Views\Analiza\Delete.cshtml" />
+    <Content Include="Views\Analiza\Details.cshtml" />
+    <Content Include="Views\Analiza\Edit.cshtml" />
+    <Content Include="Views\Analiza\Index.cshtml" />
+    <Content Include="Views\SystemKorporacyjny\Create.cshtml" />
+    <Content Include="Views\SystemKorporacyjny\Delete.cshtml" />
+    <Content Include="Views\SystemKorporacyjny\Details.cshtml" />
+    <Content Include="Views\SystemKorporacyjny\Edit.cshtml" />
+    <Content Include="Views\SystemKorporacyjny\Index.cshtml" />
+    <Content Include="Views\Kryterium\Create.cshtml" />
+    <Content Include="Views\Kryterium\Delete.cshtml" />
+    <Content Include="Views\Kryterium\Details.cshtml" />
+    <Content Include="Views\Kryterium\Edit.cshtml" />
+    <Content Include="Views\Kryterium\Index.cshtml" />
+    <Content Include="Views\Analiza\Analiza.cshtml" />
+    <Content Include="Views\Shared\View.cshtml" />
+    <Content Include="Views\Shared\_Layout - Copy.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

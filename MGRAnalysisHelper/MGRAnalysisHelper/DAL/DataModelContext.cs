@@ -18,5 +18,10 @@ namespace MGRAnalysisHelper.DAL
         public DbSet<SystemKorporacyjny> Systemy { get; set; }
         public DbSet<Kryterium> Kryteria { get; set; }
         public DbSet<Waga> Wagi { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+        }
     }
 }
