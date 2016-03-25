@@ -128,10 +128,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\AnalizaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\KryteriumController.cs" />
-    <Compile Include="Controllers\SystemKorporacyjnyController.cs" />
     <Compile Include="DAL\DataModelContext.cs" />
     <Compile Include="DAL\DataModelInitializer.cs" />
     <Compile Include="Global.asax.cs">
@@ -139,7 +136,9 @@
     </Compile>
     <Compile Include="Models\Analiza.cs" />
     <Compile Include="Models\Kryterium.cs" />
-    <Compile Include="Models\SystemKorporacyjny.cs" />
+    <Compile Include="Models\Ocena_Kryterium.cs" />
+    <Compile Include="Models\Ocena_Portal.cs" />
+    <Compile Include="Models\Portal.cs" />
     <Compile Include="Models\Waga.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -180,22 +179,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Analiza\Create.cshtml" />
-    <Content Include="Views\Analiza\Delete.cshtml" />
-    <Content Include="Views\Analiza\Details.cshtml" />
-    <Content Include="Views\Analiza\Edit.cshtml" />
-    <Content Include="Views\Analiza\Index.cshtml" />
-    <Content Include="Views\SystemKorporacyjny\Create.cshtml" />
-    <Content Include="Views\SystemKorporacyjny\Delete.cshtml" />
-    <Content Include="Views\SystemKorporacyjny\Details.cshtml" />
-    <Content Include="Views\SystemKorporacyjny\Edit.cshtml" />
-    <Content Include="Views\SystemKorporacyjny\Index.cshtml" />
-    <Content Include="Views\Kryterium\Create.cshtml" />
-    <Content Include="Views\Kryterium\Delete.cshtml" />
-    <Content Include="Views\Kryterium\Details.cshtml" />
-    <Content Include="Views\Kryterium\Edit.cshtml" />
-    <Content Include="Views\Kryterium\Index.cshtml" />
-    <Content Include="Views\Analiza\Analiza.cshtml" />
     <Content Include="Views\Shared\View.cshtml" />
     <Content Include="Views\Shared\_Layout - Copy.cshtml" />
   </ItemGroup>

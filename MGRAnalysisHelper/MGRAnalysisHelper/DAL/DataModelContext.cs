@@ -15,7 +15,7 @@ namespace MGRAnalysisHelper.DAL
 
         }
         public DbSet<Analiza> Analizy { get; set; }
-        public DbSet<SystemKorporacyjny> Systemy { get; set; }
+        public DbSet<Portal> Systemy { get; set; }
         public DbSet<Kryterium> Kryteria { get; set; }
         public DbSet<Waga> Wagi { get; set; }
 
