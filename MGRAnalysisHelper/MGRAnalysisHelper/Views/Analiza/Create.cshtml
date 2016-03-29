@@ -1,0 +1,114 @@
+﻿@model MGRAnalysisHelper.Models.Analiza
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Przeprowadź porównanie</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<div class="row">
+    <div class="col-lg-10">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                WPROWADŹ DANE ANALIZY
+            </div>
+            <div class="panel-body">
+                <div class="col-lg-6">
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-horizontal">
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="form-group">
+                                <label>@Html.LabelFor(model => model.Nazwa, htmlAttributes: new { @class = "" })</label>
+ 
+                                    @Html.EditorFor(model => model.Nazwa, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Nazwa, "", new { @class = "text-danger" })
+
+                            </div>
+
+                            <div class="form-group">
+                                <label>@Html.LabelFor(model => model.DataAnalizy, htmlAttributes: new { @class = "" })</label>
+
+                                @Html.EditorFor(model => model.DataAnalizy, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.DataAnalizy, "", new { @class = "text-danger" })
+
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-10">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                WYBIERZ PORTALE DO PORÓWNANIA
+            </div>
+            <div class="panel-body">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label>Wybierz pierwszy portal</label>
+                        <select class="form-control">
+                        @foreach (var item in ViewBag.lista)
+                        {
+                            <option>@item.Nazwa</option>
+                        }
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Wybierz drugi portal</label>
+                        <select class="form-control">
+                            @foreach (var item in ViewBag.lista)
+                            {
+                                <option>@item.Nazwa</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-10">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                WYBIERZ KRYTERIA OCENY
+            </div>
+            <div class="panel-body">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label>Kryteria</label>
+                        @foreach (var item in ViewBag.kryteria)
+                        {
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="">@item.Nazwa
+                                </label>
+                            </div>
+                        }
+                    </div>
+                    <hr class="divider">
+                    <div class="form-group">
+                        <div class="col-lg-4">
+                            <input type="submit" value="Przejdź dalej" class="btn btn-default" />
+                            @Html.ActionLink("Konfiguruj wagi", "Konfiguracja", "Waga")
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    @Html.ActionLink("Historia analiz", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

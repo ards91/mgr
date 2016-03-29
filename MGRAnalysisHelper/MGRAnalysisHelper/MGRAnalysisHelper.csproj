@@ -128,12 +128,22 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AnalizaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KryteriumController.cs" />
+    <Compile Include="Controllers\Ocena_KryteriumController.cs" />
+    <Compile Include="Controllers\PortalsController.cs" />
+    <Compile Include="Controllers\WagaController.cs" />
     <Compile Include="DAL\DataModelContext.cs" />
     <Compile Include="DAL\DataModelInitializer.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603251723259_InitialCreate.cs" />
+    <Compile Include="Migrations\201603251723259_InitialCreate.Designer.cs">
+      <DependentUpon>201603251723259_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Analiza.cs" />
     <Compile Include="Models\Kryterium.cs" />
     <Compile Include="Models\Ocena_Kryterium.cs" />
@@ -145,11 +155,31 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\font-awesome.min.css" />
+    <Content Include="Content\css\metisMenu.min.css" />
+    <Content Include="Content\css\morris.css" />
+    <Content Include="Content\css\sb-admin-2.css" />
+    <Content Include="Content\css\timeline.css" />
     <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\jquery.min.js" />
+    <Content Include="Content\js\metisMenu.min.js" />
+    <Content Include="Content\js\morris-data.js" />
+    <Content Include="Content\js\morris.min.js" />
+    <Content Include="Content\js\raphael-min.js" />
+    <Content Include="Content\js\sb-admin-2.js" />
     <Content Include="Content\sb-admin.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Content\css\bootstrap.min.css.map" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
     <None Include="Content\Site.css_old" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -181,6 +211,34 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\View.cshtml" />
     <Content Include="Views\Shared\_Layout - Copy.cshtml" />
+    <Content Include="Views\Kryterium\Create.cshtml" />
+    <Content Include="Views\Kryterium\Delete.cshtml" />
+    <Content Include="Views\Kryterium\Details.cshtml" />
+    <Content Include="Views\Kryterium\Edit.cshtml" />
+    <Content Include="Views\Kryterium\Index.cshtml" />
+    <Content Include="Views\Portals\Create.cshtml" />
+    <Content Include="Views\Portals\Delete.cshtml" />
+    <Content Include="Views\Portals\Details.cshtml" />
+    <Content Include="Views\Portals\Edit.cshtml" />
+    <Content Include="Views\Portals\Index.cshtml" />
+    <Content Include="Views\Analiza\Create.cshtml" />
+    <Content Include="Views\Analiza\Delete.cshtml" />
+    <Content Include="Views\Analiza\Details.cshtml" />
+    <Content Include="Views\Analiza\Edit.cshtml" />
+    <Content Include="Views\Analiza\Index.cshtml" />
+    <Content Include="Views\Waga\Create.cshtml" />
+    <Content Include="Views\Waga\Delete.cshtml" />
+    <Content Include="Views\Waga\Details.cshtml" />
+    <Content Include="Views\Waga\Edit.cshtml" />
+    <Content Include="Views\Waga\Index.cshtml" />
+    <Content Include="Views\Waga\Konfiguracja.cshtml" />
+    <Content Include="Views\Ocena_Kryterium\Create.cshtml" />
+    <Content Include="Views\Ocena_Kryterium\Delete.cshtml" />
+    <Content Include="Views\Ocena_Kryterium\Details.cshtml" />
+    <Content Include="Views\Ocena_Kryterium\Edit.cshtml" />
+    <Content Include="Views\Ocena_Kryterium\Index.cshtml" />
+    <Content Include="Views\Ocena_Kryterium\Ocena.cshtml" />
+    <Content Include="Views\Ocena_Kryterium\WystawOcene.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -192,6 +250,11 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201603251723259_InitialCreate.resx">
+      <DependentUpon>201603251723259_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

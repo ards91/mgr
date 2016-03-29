@@ -26,6 +26,23 @@ namespace MGRAnalysisHelper
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/sb-admin.css"));
+            bundles.Add(new StyleBundle("~/Content/css-sb").Include(
+                "~/Content/css/bootstrap.min.css",
+                "~/Content/css/font-awesome.min.css",
+                "~/Content/css/metisMenu.min.css",
+                "~/Content/css/morris.css",
+                "~/Content/css/timeline.css",
+                "~/Content/css/sb-admin-2.css"
+                ));
+            bundles.Add(new ScriptBundle("~/Content/js-sb").Include(
+                "~/Content/js/jquery.min.js",
+                "~/Content/js/bootstrap.min.js",
+                "~/Content/js/metisMenu.min.js",
+                "~/Content/js/raphael-min.js",
+                "~/Content/js/morris.min.js",
+                "~/Content/js/morris-data.js",
+                "~/Content/js/sb-admin-2.js"
+    ));
         }
     }
 }

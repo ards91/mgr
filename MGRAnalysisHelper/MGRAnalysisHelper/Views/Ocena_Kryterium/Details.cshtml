@@ -1,0 +1,58 @@
+﻿@model MGRAnalysisHelper.Models.Ocena_Kryterium
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Ocena_Kryterium</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.kryterium.Nazwa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kryterium.Nazwa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.porownania.Nazwa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.porownania.Nazwa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.portal.Nazwa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.portal.Nazwa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Wartosc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Wartosc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Opis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Opis)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

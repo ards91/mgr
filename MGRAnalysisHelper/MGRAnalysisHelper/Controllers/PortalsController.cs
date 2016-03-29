@@ -11,107 +11,107 @@ using MGRAnalysisHelper.Models;
 
 namespace MGRAnalysisHelper.Controllers
 {
-    public class SystemKorporacyjnyController : Controller
+    public class PortalsController : Controller
     {
         private DataModelContext db = new DataModelContext();
 
-        // GET: SystemKorporacyjny
+        // GET: Portals
         public ActionResult Index()
         {
-            return View(db.Systemy.ToList());
+            return View(db.Portale.ToList());
         }
 
-        // GET: SystemKorporacyjny/Details/5
+        // GET: Portals/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            SystemKorporacyjny systemKorporacyjny = db.Systemy.Find(id);
-            if (systemKorporacyjny == null)
+            Portal portal = db.Portale.Find(id);
+            if (portal == null)
             {
                 return HttpNotFound();
             }
-            return View(systemKorporacyjny);
+            return View(portal);
         }
 
-        // GET: SystemKorporacyjny/Create
+        // GET: Portals/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: SystemKorporacyjny/Create
+        // POST: Portals/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Nazwa,Opis,Ocena")] SystemKorporacyjny systemKorporacyjny)
+        public ActionResult Create([Bind(Include = "ID,Nazwa,Opis")] Portal portal)
         {
             if (ModelState.IsValid)
             {
-                db.Systemy.Add(systemKorporacyjny);
+                db.Portale.Add(portal);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(systemKorporacyjny);
+            return View(portal);
         }
 
-        // GET: SystemKorporacyjny/Edit/5
+        // GET: Portals/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            SystemKorporacyjny systemKorporacyjny = db.Systemy.Find(id);
-            if (systemKorporacyjny == null)
+            Portal portal = db.Portale.Find(id);
+            if (portal == null)
             {
                 return HttpNotFound();
             }
-            return View(systemKorporacyjny);
+            return View(portal);
         }
 
-        // POST: SystemKorporacyjny/Edit/5
+        // POST: Portals/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Nazwa,Opis,Ocena")] SystemKorporacyjny systemKorporacyjny)
+        public ActionResult Edit([Bind(Include = "ID,Nazwa,Opis")] Portal portal)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(systemKorporacyjny).State = EntityState.Modified;
+                db.Entry(portal).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(systemKorporacyjny);
+            return View(portal);
         }
 
-        // GET: SystemKorporacyjny/Delete/5
+        // GET: Portals/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            SystemKorporacyjny systemKorporacyjny = db.Systemy.Find(id);
-            if (systemKorporacyjny == null)
+            Portal portal = db.Portale.Find(id);
+            if (portal == null)
             {
                 return HttpNotFound();
             }
-            return View(systemKorporacyjny);
+            return View(portal);
         }
 
-        // POST: SystemKorporacyjny/Delete/5
+        // POST: Portals/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            SystemKorporacyjny systemKorporacyjny = db.Systemy.Find(id);
-            db.Systemy.Remove(systemKorporacyjny);
+            Portal portal = db.Portale.Find(id);
+            db.Portale.Remove(portal);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

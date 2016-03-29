@@ -15,9 +15,12 @@ namespace MGRAnalysisHelper.DAL
 
         }
         public DbSet<Analiza> Analizy { get; set; }
-        public DbSet<Portal> Systemy { get; set; }
+        public DbSet<Portal> Portale { get; set; }
         public DbSet<Kryterium> Kryteria { get; set; }
+        public DbSet<Ocena_Kryterium> OcenyKryterium { get; set; }
+        public DbSet<Ocena_Portal> OcenyPortal { get; set; }
         public DbSet<Waga> Wagi { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

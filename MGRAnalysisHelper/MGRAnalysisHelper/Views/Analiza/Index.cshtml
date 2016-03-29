@@ -1,0 +1,61 @@
+﻿@model IEnumerable<MGRAnalysisHelper.Models.Analiza>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Historia przeprowadzonych analiz</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <table class="table">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Nazwa)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DataAnalizy)
+                        </th>
+                        <th>
+                            System 1
+                        </th>
+                        <th>
+                            System 2
+                        </th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Nazwa)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DataAnalizy)
+                            </td>
+                            @foreach (var system in item.Portale)
+                            {
+                                 <td>
+                                    @system.Nazwa
+                                </td>
+                            }
+                        </tr>
+                    }
+
+                </table>
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+

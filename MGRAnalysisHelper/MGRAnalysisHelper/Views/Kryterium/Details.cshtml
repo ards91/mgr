@@ -1,0 +1,56 @@
+﻿@model MGRAnalysisHelper.Models.Kryterium
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Kryteria</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Szczegóły
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <div>
+                    <h4>Kryterium</h4>
+                    <hr />
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Nazwa)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Nazwa)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Opis)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Opis)
+                        </dd>
+
+                    </dl>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <p>
+                    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+                    @Html.ActionLink("Back to List", "Index")
+                </p>
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
