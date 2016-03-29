@@ -149,6 +149,7 @@
     <Compile Include="Models\Ocena_Kryterium.cs" />
     <Compile Include="Models\Ocena_Portal.cs" />
     <Compile Include="Models\Portal.cs" />
+    <Compile Include="Models\RaportTabelaWynik.cs" />
     <Compile Include="Models\Waga.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -239,6 +240,7 @@
     <Content Include="Views\Ocena_Kryterium\Index.cshtml" />
     <Content Include="Views\Ocena_Kryterium\Ocena.cshtml" />
     <Content Include="Views\Ocena_Kryterium\WystawOcene.cshtml" />
+    <Content Include="Views\Analiza\Raport.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

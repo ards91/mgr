@@ -4,39 +4,66 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
 
-<div>
-    <h4>Waga</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Analiza.Nazwa)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Analiza.Nazwa)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Kryterium.Nazwa)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Kryterium.Nazwa)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Wartosc)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Wartosc)
-        </dd>
-
-    </dl>
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Wagi</h1>
+    </div>
+    <!-- /.col-lg-12 -->
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Szczegóły
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Analiza.Nazwa)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Analiza.Nazwa)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Kryterium.Nazwa)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Kryterium.Nazwa)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Wartosc)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Wartosc)
+                    </dd>
+
+                </dl>
+
+            </div>
+            <div class="panel-footer">
+                <div>
+                    @Html.ActionLink("Wróc do listy", "Konfiguracja")
+                </div>
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+
+
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

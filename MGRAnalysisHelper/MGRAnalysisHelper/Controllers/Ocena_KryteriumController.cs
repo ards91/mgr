@@ -140,7 +140,7 @@ namespace MGRAnalysisHelper.Controllers
             {
                 db.Entry(ocena_Kryterium).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Ocena", new {id = 1, id1 = 2});
             }
             ViewBag.KryteriumID = new SelectList(db.Kryteria, "Id", "Nazwa", ocena_Kryterium.KryteriumID);
             ViewBag.AnalizaId = new SelectList(db.Analizy, "Id", "Nazwa", ocena_Kryterium.AnalizaId);
