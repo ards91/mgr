@@ -149,6 +149,7 @@
     <Compile Include="Models\Ocena_Kryterium.cs" />
     <Compile Include="Models\Ocena_Portal.cs" />
     <Compile Include="Models\Portal.cs" />
+    <Compile Include="Models\RaportOcenySzczegoly.cs" />
     <Compile Include="Models\RaportTabelaWynik.cs" />
     <Compile Include="Models\Waga.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

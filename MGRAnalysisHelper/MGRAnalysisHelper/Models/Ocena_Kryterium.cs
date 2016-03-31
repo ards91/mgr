@@ -10,6 +10,7 @@ namespace MGRAnalysisHelper.Models
     {
         [Key()]
         public int Id { get; set; }
+        [Range(1.0,10.0,ErrorMessage ="Wartość oceny powinna mieścić się w przedziale od 1 do 10")]
         public int Wartosc { get; set; }
         public string Opis { get; set; }
         public int KryteriumID { get; set; }
